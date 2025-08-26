@@ -77,6 +77,3 @@ You can run the application in several ways:
   docker-compose up --build
   ```
 
-## License
-
-This project is for internal and prototyping use only.
