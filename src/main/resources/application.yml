@@ -1,0 +1,27 @@
+spring:
+  ai:
+    model:
+      chat: openai
+    openai:
+      api-key: dummy-key
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: gemma3n:e4b
+  application:
+    name: census
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gis
+    username: postgres
+    password: postgres
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+      group:
+        all:
+          include: db, ollama, kafka, redis
